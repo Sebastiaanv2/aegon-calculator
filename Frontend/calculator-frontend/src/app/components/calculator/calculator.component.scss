@@ -1,0 +1,46 @@
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+
+  button {
+    font-size: 1.5rem;
+    height: 3.5rem;
+  }
+
+  .del {
+    font-size: 1rem;
+  }
+
+}
+
+.display {
+  background-color: black;
+  color: white;
+  height: 12rem;
+  border: none;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+  font-size: 1.5rem;
+
+  p {
+    overflow-x: auto;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  p.result {
+    font-size: 2rem;
+  }
+
+  p.result-title {
+    font-size: 1rem;
+  }
+
+  hr {
+    background-color: gray;
+  }
+  
+}

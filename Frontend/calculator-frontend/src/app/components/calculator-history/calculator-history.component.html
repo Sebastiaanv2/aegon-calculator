@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Previous calculations</h4>
+    </div>
+    <div class="card-body">
+          <p *ngFor="let item of calculationHistory.reverse()">{{displayCalculation(item)}}</p>
+    </div>
+</div>

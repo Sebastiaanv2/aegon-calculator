@@ -1,0 +1,41 @@
+  <div class="container">
+    <div class="col-12 row">
+      <div class="col-6">
+        <div class="card">
+          <div class="display">
+            <p>{{display}}</p>
+            <hr class="solid">
+            <p class="result-title">Result:</p>
+            <p class="result">{{result}}</p>
+          </div>
+          <div class="keys">
+            <button type="button" value="7" class="btn btn-dark" (click)="onAddNumber('7')">7</button>
+            <button type="button" value="8" class="btn btn-dark" (click)="onAddNumber('8')">8</button>
+            <button type="button" value="9" class="btn btn-dark" (click)="onAddNumber('9')">9</button>
+            <button type="button" class="btn btn-danger" value="*"
+              (click)="onSetOperator(calcOp.Multiply)">&times;</button>
+
+            <button type="button" value="4" class="btn btn-dark" (click)="onAddNumber('4')">4</button>
+            <button type="button" value="5" class="btn btn-dark" (click)="onAddNumber('5')">5</button>
+            <button type="button" value="6" class="btn btn-dark" (click)="onAddNumber('6')">6</button>
+            <button type="button" class="btn btn-danger" value="-" (click)="onSetOperator(calcOp.Subtract)">-</button>
+
+            <button type="button" value="1" class="btn btn-dark" (click)="onAddNumber('1')">1</button>
+            <button type="button" value="2" class="btn btn-dark" (click)="onAddNumber('2')">2</button>
+            <button type="button" value="3" class="btn btn-dark" (click)="onAddNumber('3')">3</button>
+            <button type="button" class="btn btn-danger" value="+" (click)="onSetOperator(calcOp.Add)">+</button>
+
+            <button type="button" value="0" class="btn btn-dark" (click)="onAddNumber('0')">0</button>
+            <button type="button" value="=" class="btn btn-primary equals" (click)="onEquals()">=</button>
+            <button type="button" class="btn btn-primary del" (click)="onDelete()">DEL</button>
+            <button type="button" value="/" class="btn btn-danger" value="/"
+              (click)="onSetOperator(calcOp.Divide)">&divide;</button>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="col-6">
+        <app-calculator-history [calculationHistory]="calculationHistory"></app-calculator-history>
+      </div>
+    </div>
+  </div>
