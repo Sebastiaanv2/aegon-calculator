@@ -28,6 +28,9 @@ export class CalculatorComponent implements OnInit {
     this._updateDisplay();
     this.calculatorService.getCalculationHistory().then(res => {
       this.calculationHistory = res;
+    }, err => {
+      this.result = 'Connection error.';
+      console.log(err);
     });
   }
 
@@ -97,6 +100,8 @@ export class CalculatorComponent implements OnInit {
       this.result = `${res.value1} ${Utilities.displayCalcOperator(enumValue)} ${res.value2} = ${res.result}`;
       this.calculationHistory.push(res);
       this._resetCalc();
+    }, err => {
+      console.log(err);
     });
   }
 
