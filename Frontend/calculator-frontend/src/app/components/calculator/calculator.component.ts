@@ -95,6 +95,7 @@ export class CalculatorComponent implements OnInit {
     this.calculatorService.calculate(new Calculation(this.currentOperator, this.val1, this.val2)).then(res => {
       const enumValue = (CalculationOperator as any)[res.operator];
       this.result = `${res.value1} ${Utilities.displayCalcOperator(enumValue)} ${res.value2} = ${res.result}`;
+      this.calculationHistory.push(res);
       this._resetCalc();
     });
   }
